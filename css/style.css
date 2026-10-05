@@ -1,25 +1,34 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #b1adad;
-    color: #222222;
+    background-color: #CCBEB1;
+    color: #333333;
+    line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
+header {
+    background-color: #EDD5D9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 4px 10px #A8877B;
+    text-align: center;
 }
 
 
 /* Top */
 
 .top {
-    background-color: #0b000b;
-    color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 0 0 10px 10px;
+    background-color: #EDD5D9;
+    border: 1px solid #d8c5b8;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
 }
+ 
 
 .logo {
     text-align: center;
@@ -47,61 +56,106 @@ body {
     margin-top: 20px;
 }
 
-
-/* General sections */
-
-.about,
-.projects,
-.skills,
-.education,
-.contact,
-.social,
-.footer {
-    background-color: rgb(237, 240, 241);
-    padding: 25px;
-    margin-bottom: 20px;
+#about,
+#skills,
+#projects,
+#education,
+#contact {
+    background-color: #FFF1E8;
+    padding: 30px;
+    margin: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 12px #C9AFA5;
+    transition: 0.3s;
+}
+
+#about:hover,
+#skills:hover,
+#projects:hover,
+#education:hover,
+#contact:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px #A8877B;
+    background-color: #FCE5D8;
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#education h2,
+#contact h2 {
+    color: #9C5C50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#about-me{
+    background-color: #fff1e8;
+    border: 1px solid #d8c5b8;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+}
+.about-box {
+  border: 2px solid #ccc;  
+  padding: 15px;            
+  margin: 20px 0;           
+  border-radius: 8px;       
+  background-color: #f9f9f9; 
+}
+
+#skills {
+    background-color: #fff1e8;
+    border: 1px solid #d8c5b8;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
 }
 
 
-/* About */
-
-.about h1,
-.projects h1,
-.skills h1,
-.education h1,
-.contact h1 {
-    border-bottom: 2px solid #656464;
-    padding-bottom: 10px;
-}
-
-
-/* Project */
-
-.project {
-    background-color: #444242;
+#projects article {
+    background-color: #FCE5D8;
     padding: 20px;
+    margin: 15px 0;
     border-radius: 8px;
+    box-shadow: 0 2px 8px #D6B8AA;
+    transition: transform 0.3s;
 }
 
+#projects article:hover {
+    transform: translateY(-8px);
+}
 
-/* Skills */
-
-.skills dt {
+#projects article h3 {
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 15px;
+    color: #9C5C50;
 }
 
-.skills dd {
-    margin-left: 20px;
+#projects article p {
+    line-height: 1.6;
 }
 
+article a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #9C5C50;
+    text-decoration: none;
+}
+
+article a:hover {
+    color: #D99AAF;
+}
 
 /* Education */
 
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: #D99AAF;
+    color: black;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
 th,
@@ -112,24 +166,69 @@ td {
 }
 
 th {
-    background-color: #4a0230;
+    background-color: #0e000a;
     color: white;
 }
 
 
-/* Contact */
-
-.contact input {
-    padding: 5px;
-    width: 200px;
-    margin-top: 10px;
+#contact form {
+    max-width: 600px;
+    margin: auto;
 }
 
-button {
-    padding: 10px 20px;
+#contact label {
+    font-weight: bold;
+    color: #9C5C50;
+}
+
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #C9AFA5;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #FFF1E8;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    background-color: #D99AAF;
+    color: black;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
 }
 
+#contact button:hover {
+    background-color: #C47F97;
+}
+
+#footer {
+    background-color: #EDD5D9;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 10px #A8877B;
+}
+
+#footer h2 {
+    color: #9C5C50;
+}
+
+#social-media {
+    background-color: #fff1e8;
+    border: 1px solid #d8c5b8;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+}
 
 /* Social */
 
@@ -142,8 +241,29 @@ button {
 }
 
 
+
 /* Footer */
 
 .footer {
     text-align: center;
 }
+
+
+
+body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    
